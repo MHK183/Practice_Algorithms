@@ -1,7 +1,6 @@
 word = input()
-r_word = ''.join(list(reversed(word)))
 
-if word == r_word:
+if word == word[::-1]:
     print(1)
 else:
     print(0)
