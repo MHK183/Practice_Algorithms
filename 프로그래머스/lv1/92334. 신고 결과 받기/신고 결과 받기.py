@@ -4,10 +4,9 @@ def solution(id_list, report, k):
     report_user = {}
     ban_list = []
     # 신고한 유저의 신고목록
-    for i in report:
+    for i in set(report):
         n = i.split()
         user_dict[n[0]].append(n[1])
-        user_dict[n[0]] = list(set(user_dict[n[0]]))
     # 신고당한 유저 횟수 세기
     for i in user_dict:
         for j in user_dict[i]:
@@ -26,4 +25,5 @@ def solution(id_list, report, k):
             if u in ban_list:
                 mail_cnt += 1
         answer.append(mail_cnt)
+
     return answer
