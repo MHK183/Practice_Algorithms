@@ -16,6 +16,7 @@ def solution(polynomial):
         x = ''
     if x == 0:
         return f'{digit}'
-    if digit == 0:
+    elif digit == 0:
         return f'{x}x'
-    return f'{x}x + {digit}'
+    else:
+        return f'{x}x + {digit}'
