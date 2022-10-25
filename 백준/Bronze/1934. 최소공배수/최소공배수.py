@@ -6,5 +6,5 @@ for i in range(t):
     while b != 0:
         r = a % b
         (a, b) = (b, r)
-    print((x // a) * (y // a) * a)
+    print(x * y // a)
     
