@@ -1,24 +1,17 @@
+import sys
+rsp = {'R':'S', 'S':'P', 'P':'R'}
+
 for _ in range(int(input())):
     p1, p2 = 0, 0
     for _ in range(int(input())):
         
-        a, b = input().split()
-        if a == 'R':
-            if b == 'S':
-                p1 += 1
-            elif b == 'P':
-                p2 += 1
-        elif a == 'P':
-            if b == 'R':
-                p1 += 1
-            elif b == 'S':
-                p2 += 1
-        elif a == 'S':
-            if b == 'P':
-                p1 += 1
-            elif b == 'R':
-                p2 += 1 
-
+        a, b = sys.stdin.readline().split()
+        if rsp[a] == b:
+            p1 += 1
+        elif a == b:
+            continue
+        else:
+            p2 += 1
         
         
     if p1 > p2:
