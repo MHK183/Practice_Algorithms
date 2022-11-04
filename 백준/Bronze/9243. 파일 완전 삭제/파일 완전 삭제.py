@@ -1,17 +1,12 @@
 n = int(input())
-before, after = input(), input()
-result = True
-if n % 2 == 1:
-    for i in range(len(before)):
-        if before[i] == after[i]:
-            result = False
-            break
+before, after = int(input(), 2), int(input(), 2)
+result = bin(before ^ after)[2:]
 
-    if result:
+if n % 2 == 1:
+    if result.count('0') == 0:
         print('Deletion succeeded')
     else:
         print('Deletion failed')
-        
 else:
     if before == after:
         print('Deletion succeeded')
