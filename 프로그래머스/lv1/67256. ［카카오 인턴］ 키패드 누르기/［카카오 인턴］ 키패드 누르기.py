@@ -11,12 +11,13 @@ def solution(numbers, hand):
     for number in numbers:
     
         if number in mid_num:
-            if abs(key[number][0] - left_loc[0]) + abs(key[number][1] - left_loc[1]) < \
-                abs(key[number][0] - right_loc[0]) + abs(key[number][1] - right_loc[1]):
+            left_distance = abs(key[number][0] - left_loc[0]) + abs(key[number][1] - left_loc[1])
+            right_distance = abs(key[number][0] - right_loc[0]) + abs(key[number][1] - right_loc[1])
+            
+            if  left_distance < right_distance:
                 answer += 'L'
                 left_loc = key[number]
-            elif abs(key[number][0] - left_loc[0]) + abs(key[number][1] - left_loc[1]) > \
-                abs(key[number][0] - right_loc[0]) + abs(key[number][1] - right_loc[1]):
+            elif left_distance > right_distance:
                 answer += 'R'
                 right_loc = key[number]
             else:
