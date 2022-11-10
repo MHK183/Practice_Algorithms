@@ -3,9 +3,7 @@ def solution(k, m, score):
     score.sort(reverse=True)
     apple_box = []
     for i in range(0, len(score), m):
-        apple_box.append(score[i:i+m])
-    for apple in apple_box:
-        if len(apple) == m:
-            answer += min(apple) * m
+        if len(score[i:i+m]) == m:
+            answer += min(score[i:i+m]) * m
 
     return answer
