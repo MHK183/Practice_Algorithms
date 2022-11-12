@@ -1,9 +1,7 @@
-import sys
-
 p1, p2 = 0, 0
 
 for _ in range(int(input())):
-    a, b = map(int, sys.stdin.readline().split())
+    a, b = map(int, input().split())
     
     if a > b:
         p1 += 1
