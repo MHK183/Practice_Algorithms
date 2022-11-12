@@ -1,10 +1,14 @@
 while True:
     try:
         n = int(input())
-        for i in range(1, 100000):
-            answer = int('1' * i)
-            if answer % n == 0:
-                print(len(str(answer)))
+        i = 0
+        answer = 0
+        while True:
+            i += 1
+            answer = answer * 10 + 1
+            answer %= n
+            if answer == 0:
+                print(i)
                 break
     except:
         break
