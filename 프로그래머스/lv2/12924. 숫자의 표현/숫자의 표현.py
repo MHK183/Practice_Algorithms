@@ -1,7 +1,7 @@
 def solution(n):
-    answer = 1
+    answer = 0
     
-    for x in range(1, n // 2 + 1):
+    for x in range(1, n + 1):
         n_sum = 0
         for i in range(x, n+1):
             n_sum += i
