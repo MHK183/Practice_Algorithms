@@ -1,0 +1,54 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "0a5b5745",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "143 12\n",
+      "BAD 11\n"
+     ]
+    }
+   ],
+   "source": [
+    "K, L = map(int, input().split())\n",
+    "answer = True\n",
+    "for i in range(2, L):\n",
+    "    if K % i == 0:\n",
+    "        answer = False\n",
+    "        break\n",
+    "\n",
+    "if answer:\n",
+    "    print(\"GOOD\")\n",
+    "else:\n",
+    "    print(f\"BAD {i}\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
