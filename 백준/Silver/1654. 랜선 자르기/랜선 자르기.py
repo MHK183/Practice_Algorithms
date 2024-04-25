@@ -1,3 +1,7 @@
+import sys
+
+input = sys.stdin.readline
+
 K, N = map(int, input().split())
 cables = [int(input()) for _ in range(K)]
 total_length = sum(cables)
